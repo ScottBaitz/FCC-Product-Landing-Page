@@ -1,24 +1,10 @@
-body {
-  background: LightGray;
-  width: 75vw;
-  margin: auto;
-  display: grid;
-  font-size: 1.1em;
-  grid-template-areas:
-    "header"
-    "article"
-    "section"
-    "video"
-    "footer";
-}
-
 header {
   grid-area: header;
   width: 100%;
   border: 1px solid red;
 }
 
-#nav-bar {
+nav {
   position: sticky;
   top: 0;
   background: LightGray;
@@ -36,33 +22,20 @@ img {
   height: auto;
 }
 
-main {
-  grid-area: main;
+#ourstory {
+  grid-area: about;
   border: 1px solid red;
-  /* display: flex; */
-  /* flex-direction: column; */
-}
-
-/* #text {
-  display: flex;
-  flex-direction: row;
-} */
-article {
-  grid-area: article;
-  border: 1px solid red;
-  /* display: flex; */
   flex-basis: 50%;
 }
 
-section {
-  grid-area: section;
+#ourproduct {
+  grid-area: product;
   border: 1px solid red;
-  /* display: flex; */
   flex-basis: 50%;
 }
 
 #videodiv {
-  grid-area: video;
+  grid-area: vid;
   border: 1px solid red;
   display: flex;
   justify-content: center;
@@ -73,4 +46,32 @@ section {
   grid-area: footer;
 }
 
-@media {}
+body {
+  background: LightGray;
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  font-size: 1.1em;
+  grid-template-areas:
+    "header"
+    "about"
+    "product"
+    "vid"
+    "footer";
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background: blue;
+    margin: auto;
+    display: grid;
+    font-size: 1.1em;
+    grid-template-areas:
+      "header header"
+      "about product"
+      "vid vid"
+      "footer footer";
+  }
+}
