@@ -1,58 +1,75 @@
-#container {
+body {
   background: LightGray;
+  width: 75vw;
+  margin: auto;
   display: grid;
+  font-size: 1.1em;
   grid-template-areas:
     "header"
-    "main"
+    "article"
+    "section"
+    "video"
     "footer";
 }
 
-#nav-bar {
+header {
   grid-area: header;
-  float: left;
-  text-align: center;
-  /* flex-direction: column; */
-  position: fixed;
-  padding: 10;
   width: 100%;
-  top: 0;
-  background-color: #333;
-  color: #f2f2f2;
-  /* justify-content: center; */
-  /* align-items: center; */
+  border: 1px solid red;
 }
 
-#companylogo {
+#nav-bar {
+  position: sticky;
+  top: 0;
+  background: LightGray;
+  border: 1px solid red;
+}
+
+#nav {
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  grid-area: main;
+  border: 1px solid red;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+/* #text {
+  display: flex;
+  flex-direction: row;
+} */
+article {
+  grid-area: article;
+  border: 1px solid red;
+  /* display: flex; */
+  flex-basis: 50%;
+}
+
+section {
+  grid-area: section;
+  border: 1px solid red;
+  /* display: flex; */
+  flex-basis: 50%;
+}
+
+#videodiv {
+  grid-area: video;
+  border: 1px solid red;
+  display: flex;
   justify-content: center;
 }
 
-#main {
-  grid-area: main;
-  background: LightSalmon;
-  display: flex;
-  flex-direction: column;
-}
-
-#main {
-  background: purple;
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  margin: auto;
-}
-
-#ourproduct {
-  background: pink;
-}
-
-#video {
-  background: green;
-}
-
 #footer {
-  background: PaleTurquoise;
+  border: 1px solid red;
   grid-area: footer;
 }
 
