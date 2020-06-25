@@ -62,10 +62,9 @@ body {
     "footer";
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
   body {
     background: blue;
-    margin: auto;
     display: grid;
     font-size: 1.1em;
     grid-template-areas:
